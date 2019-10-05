@@ -85,7 +85,7 @@ class GameServerService(metaclass=Singleton):
 
         game_info = GameInfo(current_map, host, others)
 
-        return self.__bot.get_next_action(game_info)
+        self.__hub.send("ReturnExecuteTurn", [self.__bot.get_next_action(game_info).value])
 
     def __on_receive_final_map(self, map):
         self.__hub.stop()

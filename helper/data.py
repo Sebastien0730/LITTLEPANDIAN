@@ -266,6 +266,7 @@ class HostPlayer(Player):
         """Get the last move that was done by this palyer"""
         return self.__last_move
 
+
 class GameInfo(object):
     def __init__(self, map, host, others):
         self.__map = map
