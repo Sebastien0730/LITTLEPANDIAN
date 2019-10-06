@@ -226,7 +226,7 @@ class Player(object):
     @property
     def team_number(self):
         """Get the team number of this player"""
-        return self.__team_id
+        return self.__team_number
 
     @property
     def position(self):
