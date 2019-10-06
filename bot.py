@@ -64,7 +64,7 @@ class Bot(object):
             for newPosition in possiblePositions:
                 nodePosition = (hostPosition.x + newPosition[0], hostPosition.y + newPosition[1])
                 #print(nodePosition)
-                if nodePosition[0] > 16 or nodePosition[0] < 0 or nodePosition[1] > 16 or nodePosition[1] < 0:  # Wall
+                if nodePosition[0] > 15 or nodePosition[0] < 0 or nodePosition[1] > 15 or nodePosition[1] < 0:  # Wall
                     #print("Outside of wall")
                     continue
 
@@ -166,7 +166,7 @@ def findPath(map, start, teamNum, end, game_info):
                 return newPath
 
             # Verify that node is not outside maze
-            if node_position[0] > 16 or node_position[0] < 0 or node_position[1] > 16 or node_position[1] < 0:
+            if node_position[0] > 15 or node_position[0] < 0 or node_position[1] > 15 or node_position[1] < 0:
                 continue
 
             # Verify that node is walkable terrain
@@ -251,7 +251,7 @@ def getPossiblePositionsOutside(game_info, current):
     for moves in possibleMoves:
         tilePosition = (current[0] + moves[0], current[1] + moves[1])
 
-        if tilePosition[0] > 16 or tilePosition[0] < 0 or tilePosition[1] > 16 or tilePosition[1] < 0:
+        if tilePosition[0] > 15 or tilePosition[0] < 0 or tilePosition[1] > 15 or tilePosition[1] < 0:
             continue
         elif game_info.map.tiles[tilePosition[1]][tilePosition[0]].team_tail is not None or game_info.map.tiles[tilePosition[1]][tilePosition[0]].team_head is not None:
             continue

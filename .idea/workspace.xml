@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0509044e-8411-49c5-b7e9-21083d193792" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="55" column="25" lean-forward="true" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
+            <state relative-caret-position="222">
+              <caret line="253" column="78" selection-start-line="253" selection-start-column="78" selection-end-line="253" selection-end-column="78" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -27,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/helper/data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="89" column="18" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="18" />
+            <state relative-caret-position="1416">
+              <caret line="211" column="19" lean-forward="true" selection-start-line="211" selection-start-column="19" selection-end-line="211" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -36,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/helper/game_server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-221">
-              <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+            <state relative-caret-position="137">
+              <caret line="78" column="37" selection-end-line="104" />
             </state>
           </provider>
         </entry>
@@ -63,8 +64,15 @@
       <find>simple_positions</find>
       <find>host</find>
       <find>hostObject</find>
-      <find>tile</find>
       <find>newPath</find>
+      <find>tile</find>
+      <find>Could not find team's head in map</find>
+      <find>team</find>
+      <find>other</find>
+      <find>get_head_position</find>
+      <find>15</find>
+      <find>other_position</find>
+      <find>16</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -73,8 +81,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/helper/game_server.py" />
         <option value="$PROJECT_DIR$/helper/data.py" />
+        <option value="$PROJECT_DIR$/helper/game_server.py" />
         <option value="$PROJECT_DIR$/bot.py" />
       </list>
     </option>
@@ -172,7 +180,21 @@
       <option name="project" value="LOCAL" />
       <updated>1570322484700</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Final working lol not working">
+      <created>1570322522522</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1570322522522</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Final after catching a bug from slack">
+      <created>1570328961485</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1570328961485</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -203,7 +225,8 @@
     <MESSAGE value="Final not working" />
     <MESSAGE value="Final not working2" />
     <MESSAGE value="Final working lol not working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final working lol not working" />
+    <MESSAGE value="Final after catching a bug from slack" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final after catching a bug from slack" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/helper/app.py" />
@@ -226,22 +249,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/helper/game_server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+        <state relative-caret-position="137">
+          <caret line="78" column="37" selection-end-line="104" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/helper/data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="89" column="18" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="18" />
+        <state relative-caret-position="1416">
+          <caret line="211" column="19" lean-forward="true" selection-start-line="211" selection-start-column="19" selection-end-line="211" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="55" column="25" lean-forward="true" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
+        <state relative-caret-position="222">
+          <caret line="253" column="78" selection-start-line="253" selection-start-column="78" selection-end-line="253" selection-end-column="78" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
