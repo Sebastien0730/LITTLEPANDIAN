@@ -57,12 +57,7 @@ class Bot(object):
             else:
                 newPath = path[1]
 
-            print(str(newPath[0])+"-----"+str(newPath[1]))
-            print(map[newPath[0]][newPath[1]].team_tail)
-            print(map[newPath[0]][newPath[1]].team_head)
-            print(str(hostPosition.x)+" - host - "+ str(hostPosition.y))
             nextMove = (newPath[0] - hostPosition.x, newPath[1] - hostPosition.y)
-            print(nextMove)
         else:
             pos = []
 
