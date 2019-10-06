@@ -53,7 +53,7 @@ class Bot(object):
             path = findPath(map, (hostPosition.x, hostPosition.y), teamNum, endPos, game_info)
 
             if len(path) == 1:
-                newPath == endPos
+                newPath = endPos
             else:
                 newPath = path[1]
 
