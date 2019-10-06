@@ -87,13 +87,13 @@ class Bot(object):
 
         print("Next move == "+str(nextMove))
         if nextMove == (1,0):
-            return Direction.UP
-        elif nextMove == (0,-1):
             return Direction.RIGHT
+        elif nextMove == (0,-1):
+            return Direction.UP
         elif nextMove == (-1,0):
-            return Direction.DOWN
-        elif nextMove == (0,1):
             return Direction.LEFT
+        elif nextMove == (0,1):
+            return Direction.DOWN
 
         #return Direction.RIGHT
 
