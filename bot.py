@@ -33,11 +33,11 @@ class Bot(object):
         possiblePositions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
 
         if lastMove == Direction.UP:
-            possiblePositions = [(1, 0), (0, -1), (-1, 0)]
+            possiblePositions = [(1, 0), (0, 1), (-1, 0)]
         elif lastMove == Direction.RIGHT:
             possiblePositions = [(0, 1), (0, -1), (-1, 0)]
         elif lastMove == Direction.DOWN:
-            possiblePositions = [(0, 1), (1, 0), (-1, 0)]
+            possiblePositions = [(0, -1), (1, 0), (-1, 0)]
         elif lastMove == Direction.LEFT:
             possiblePositions = [(0, 1), (1, 0), (0, -1)]
 
@@ -50,9 +50,12 @@ class Bot(object):
             nx = endPos[1]
             ny = endPos[0]
 
-            path = findPath(map, (hostPosition.x, hostPosition.y), teamNum, endPos)
+            path = findPath(map, (hostPosition.x, hostPosition.y), teamNum, endPos, game_info)
 
-            newPath = path[1] if len(path) > 1 else path[0]
+            if len(path) == 1:
+                newPath == endPos
+            else:
+                newPath = path[1]
 
             print(str(newPath[0])+"-----"+str(newPath[1]))
             print(map[newPath[0]][newPath[1]].team_tail)
@@ -98,7 +101,7 @@ class Bot(object):
         #return Direction.RIGHT
 
 
-def findPath(map, start, teamNum, end):
+def findPath(map, start, teamNum, end, game_info):
     start_node = Node(None, start)
     end_node = Node(None, end)
     open_set = []
@@ -131,21 +134,32 @@ def findPath(map, start, teamNum, end):
                 path.append(current.position)
                 current = current.parent
             newPath = path[::-1]  # Return reversed path
-            print(newPath)
             return newPath
 
         # Generate children
         children = []
 
-        simple_positions = [(0, -1), (0, 1), (-1, 0), (1, 0)]
+        lastMove = game_info.host_player.last_move
+        possiblePositions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
 
-        for new_position in simple_positions:
+        if lastMove == Direction.UP:
+            possiblePositions = [(1, 0), (0, 1), (-1, 0)]
+        elif lastMove == Direction.RIGHT:
+            possiblePositions = [(0, 1), (0, -1), (-1, 0)]
+        elif lastMove == Direction.DOWN:
+            possiblePositions = [(0, -1), (1, 0), (-1, 0)]
+        elif lastMove == Direction.LEFT:
+            possiblePositions = [(0, 1), (1, 0), (0, -1)]
+
+        for new_position in possiblePositions:
 
             # Get node position
             node_position = (current_node.position[0] + new_position[0], current_node.position[1] + new_position[1])
             newNode = Node(current_node, node_position)
 
-            if newNode == end_node:
+
+
+            if newNode == end_node or map[node_position[1]][node_position[0]].team_owner == teamNum:
                 # if map[nx][ny].team_owner == teamNum and map[nx][ny].team_tail is None and map[nx][ny].team_head is None:  # end condition
                 path = []
                 current = current_node
@@ -161,7 +175,7 @@ def findPath(map, start, teamNum, end):
                 continue
 
             # Verify that node is walkable terrain
-            if map[node_position[1]][node_position[0]].is_empty == False:
+            if map[node_position[1]][node_position[0]].team_tail is not None or map[node_position[1]][node_position[0]].team_head is not None:
                 continue
 
             # Crete new node
@@ -212,7 +226,7 @@ def outPath(game_info, team):
 
     while not frontier.empty():
         current = frontier.get()
-        tile = game_info.map.tiles[current[0]][current[1]].team_owner
+        tile = game_info.map.tiles[current[1]][current[0]].team_owner
         if tile == team:
             print("Current: " + str(current))
             return current
@@ -244,7 +258,7 @@ def getPossiblePositionsOutside(game_info, current):
 
         if tilePosition[0] > 15 or tilePosition[0] < 0 or tilePosition[1] > 15 or tilePosition[1] < 0:
             continue
-        elif game_info.map.tiles[tilePosition[0]][tilePosition[1]].team_tail is not None or game_info.map.tiles[tilePosition[0]][tilePosition[1]].team_head is not None:
+        elif game_info.map.tiles[tilePosition[1]][tilePosition[0]].team_tail is not None or game_info.map.tiles[tilePosition[1]][tilePosition[0]].team_head is not None:
             continue
 
         possiblePositions.append(tilePosition)

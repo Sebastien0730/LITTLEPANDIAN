@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0509044e-8411-49c5-b7e9-21083d193792" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper/data.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="95" column="33" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="33" />
+            <state relative-caret-position="493">
+              <caret line="57" column="33" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -30,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/helper/data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="104" column="16" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="16" />
+            <state relative-caret-position="171">
+              <caret line="89" column="18" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -62,6 +60,10 @@
       <find>maze</find>
       <find>last</find>
       <find>value</find>
+      <find>map</find>
+      <find>simple_positions</find>
+      <find>host</find>
+      <find>hostObject</find>
       <find>tile</find>
     </findStrings>
   </component>
@@ -142,7 +144,21 @@
       <option name="project" value="LOCAL" />
       <updated>1570298387542</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Final not working">
+      <created>1570320540171</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1570320540171</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Final not working2">
+      <created>1570320607264</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1570320607265</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -170,7 +186,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="try 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="try 1" />
+    <MESSAGE value="Final not working" />
+    <MESSAGE value="Final not working2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final not working2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/helper/app.py" />
@@ -200,15 +218,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/helper/data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="104" column="16" selection-start-line="104" selection-start-column="8" selection-end-line="104" selection-end-column="16" />
+        <state relative-caret-position="171">
+          <caret line="89" column="18" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="95" column="33" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="33" />
+        <state relative-caret-position="493">
+          <caret line="57" column="33" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
