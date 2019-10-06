@@ -73,7 +73,10 @@ class GameServerService(metaclass=Singleton):
 
         others = []
         for other_team in Team.get_other_teams(host_team):
-            other_position = current_map.get_head_position(other_team)
+            try:
+                other_position = current_map.get_head_position(other_team)
+            except KeyError:
+                other_position = None
             other_tail = current_map.get_tail_length(other_team)
             other_body = current_map.get_body_size(other_team)
             others.append(Player(
